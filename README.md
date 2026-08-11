@@ -1,5 +1,7 @@
 # Inventory — Lite
 
+> **New since 1.0.0:** a no-code authoring dock (create, edit, duplicate and delete `ItemLite` items from an editor panel) and a one-click **Setup** tab that drops a working component into your scene. Details in CHANGELOG.md.
+
 **FREE.** Single-container item inventory for Godot 4.3+. Pure GDScript. MIT.
 
 The working core of the [CindieForge Inventory addon](docs/upgrade.md). One `InventoryLite` Node per character. Items are `ItemLite` Resources. Stacks merge by id, respect `max_stack`, and fail gracefully when capacity is exceeded.

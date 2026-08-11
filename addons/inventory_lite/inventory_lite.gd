@@ -5,7 +5,7 @@ extends Node
 # capacity in number of *slots* (not weight). No categories enforcement, no
 # themes, no UI — wire your own list view to the signals below.
 #
-# This is the **working core** of the CindieForge Inventory addon. Features
+# This is the **working core** of the selodev Inventory addon. Features
 # cut from the paid Pro tier:
 #
 #   * Weight limits + category gating

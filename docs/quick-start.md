@@ -42,7 +42,7 @@ inventory.slot_full.connect(func(item): print("No room for ", item.name))
 
 ## Save / load
 
-The Lite tier doesn't ship a save contract — call `snapshot()` / `restore(data)` from your own save system, or pair with **Save / Load — Lite** and stash the snapshot in your `save_state()`:
+The Lite tier doesn't ship a save contract — call `snapshot()` / `restore(data)` from your own save system, or pair with **Save / Load (Lite)** and stash the snapshot in your `save_state()`:
 
 ```gdscript
 func get_save_id() -> String:
