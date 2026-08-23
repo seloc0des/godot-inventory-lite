@@ -1,8 +1,8 @@
 # Inventory — Lite
 
-**FREE.** Single-container item inventory for Godot 4.3+. Pure GDScript. MIT.
+**FREE.** Single-container item inventory for Godot 4.5+. Pure GDScript. MIT.
 
-The working core of the [CindieForge Inventory addon](docs/upgrade.md). One `InventoryLite` Node per character. Items are `ItemLite` Resources. Stacks merge by id, respect `max_stack`, and fail gracefully when capacity is exceeded.
+The working core of the [selodev Inventory addon](docs/upgrade.md). One `InventoryLite` Node per character. Items are `ItemLite` Resources. Stacks merge by id, respect `max_stack`, and fail gracefully when capacity is exceeded.
 
 ## 5-minute install
 

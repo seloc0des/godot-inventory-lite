@@ -1,15 +1,19 @@
-# Inventory — Lite
+# Inventory (Lite)
 
-> **New since 1.0.0:** a no-code authoring dock (create, edit, duplicate and delete `ItemLite` items from an editor panel) and a one-click **Setup** tab that drops a working component into your scene. Details in CHANGELOG.md.
+**FREE.** Single-container item inventory for Godot 4.5+. Pure GDScript. MIT.
 
-**FREE.** Single-container item inventory for Godot 4.3+. Pure GDScript. MIT.
+The working core of the [selodev Inventory addon](docs/upgrade.md). One `InventoryLite` Node per character. Items are `ItemLite` Resources. Stacks merge by id, respect `max_stack`, and fail gracefully when capacity is exceeded.
 
-The working core of the [CindieForge Inventory addon](docs/upgrade.md). One `InventoryLite` Node per character. Items are `ItemLite` Resources. Stacks merge by id, respect `max_stack`, and fail gracefully when capacity is exceeded.
+> **New in v1.1 — no-code dock.** Enable the plugin and an authoring panel appears: create, edit, duplicate, and delete your resources in a UI, no Inspector or `.tres` editing. (The Pro tier adds every field, one-click scene wiring, and the `EventTrigger` node.)
+
+## One-click setup (no code)
+
+Enable the plugin and a **Inventory · Setup** tab appears in the editor. Pick the outcome you want and press **Apply** — the Lite component is added to your scene, baked in and editable. *(Pro unlocks the full no-code wiring — gameplay triggers, bound UI, cross-system hooks.)*
 
 ## 5-minute install
 
 1. Copy `addons/inventory_lite/` into your project's `addons/` folder.
-2. Project → Project Settings → Plugins → enable **Inventory — Lite**.
+2. Project → Project Settings → Plugins → enable **Inventory (Lite)**.
 3. Drop an `InventoryLite` node on your player. Set `capacity`.
 4. Create `ItemLite` Resources for each item (Inspector or factory script).
 5. `inventory.add_item(item, n)`, `inventory.remove_item(item, n)`, `inventory.has_item(item, n)`.
@@ -39,7 +43,6 @@ See [docs/upgrade.md](docs/upgrade.md).
 ## License
 
 MIT.
-
 
 ---
 
