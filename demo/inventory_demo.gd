@@ -1,6 +1,5 @@
 extends Node
 
-const ItemLiteScript := preload("res://addons/inventory_lite/item_resource.gd")
 const InventoryLiteScript := preload("res://addons/inventory_lite/inventory_lite.gd")
 
 var _inv: InventoryLite
@@ -14,11 +13,11 @@ func _ready() -> void:
 	bg.anchor_right = 1; bg.anchor_bottom = 1
 	add_child(bg)
 
-	# Build a few demo items.
+	# The same items the Setup tab offers as examples for a pickup.
 	_items = [
-		_item("apple", "Apple", 99),
-		_item("sword", "Iron Sword", 1),
-		_item("potion", "Health Potion", 16),
+		load("res://demo/items/apple.tres"),
+		load("res://demo/items/iron_sword.tres"),
+		load("res://demo/items/health_potion.tres"),
 	]
 
 	_inv = InventoryLiteScript.new()
@@ -68,12 +67,6 @@ func _ready() -> void:
 	panel.add_child(_list)
 
 	_rebuild()
-
-
-func _item(id_: String, name_: String, stack: int) -> Resource:
-	var it = ItemLiteScript.new()
-	it.id = id_; it.name = name_; it.max_stack = stack
-	return it
 
 
 func _rebuild() -> void:
