@@ -14,14 +14,15 @@ Inventory — Lite covers "stack items in slots." The Pro tier adds production-g
 - **Save-contract auto-join.** Inventory state lives in the Save addon's payload automatically.
 - **Shared `Events` autoload.** `item_acquired`, `item_removed`, `item_used` — picked up by Quests, Crafting, Vendor, Loot for cross-system integration.
 
-## Migration from Lite
+## Moving from Lite
 
-Both tiers use the same `id` / `name` / `category` / `max_stack` field names on the item Resource — drop your `ItemLite.tres` files into the Pro project and they upgrade as-is. `add_item`, `remove_item`, `has_item`, `count_item` carry the same signatures. The migration is a class-name swap and an enable-plugin step.
+The full version installs next to the Lite, in its own folder, and both run in the same project, so you can move over one piece at a time. It isn't a drop-in replacement: the class names differ, and so do some method names.
+
+`InventoryLite` becomes `InventoryComponent`. `add_item`, `remove_item`, `has_item`, `count_item`, `clear` and `slot_count` keep their names. `snapshot()` and `restore()` don't exist in the full version, which saves through the Save / Load contract instead. Your `ItemLite.tres` files stay Lite resources, so re-create them as the full `ItemResource`. All seven fields have the same names, so it's a matter of copying the values across.
 
 ## Where to buy
 
-The full version is on itch.io — **https://selodev.itch.io**. Both tiers share the
-same field names and method signatures, so upgrading is a class-name swap.
+The full version is on itch.io: **https://selodev.itch.io**.
 
 ## License
 
