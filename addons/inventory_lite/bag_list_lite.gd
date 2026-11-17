@@ -3,7 +3,7 @@ extends PanelContainer
 
 # The player's bag as plain text, one "<name> x<count>" line per slot. It finds
 # the bag itself (on the node in the "player" group) and follows its changes.
-# Starts hidden; the toggle action shows and hides it. Pro's bag is the styled
+# Starts hidden; the toggle action shows and hides it. The full version's bag is the styled
 # one: icons, drag and drop, tooltips and a hotbar.
 
 ## Input action that shows and hides the list. The Setup tab registers "inventory" on I.

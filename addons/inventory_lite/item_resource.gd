@@ -1,7 +1,7 @@
 class_name ItemLite
 extends Resource
 
-# Minimal item Resource for Inventory — Lite. Duck-compatible with the Pro
+# Minimal item Resource for Inventory (Lite). Duck-compatible with the full
 # `ItemResource` on the shared fields (id, name, icon, max_stack, category)
 # so upgrading is a straight swap.
 

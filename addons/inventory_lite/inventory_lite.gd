@@ -6,7 +6,7 @@ extends Node
 # themes. BagListLite is a plain list of it; for your own UI, use the signals below.
 #
 # This is the **working core** of the selodev Inventory addon. Features
-# cut from the paid Pro tier:
+# Not in the Lite:
 #
 #   * Weight limits + category gating
 #   * InventoryTheme + drop-in grid UI

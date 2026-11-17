@@ -3,7 +3,7 @@ extends EditorPlugin
 
 # Inventory — Lite has no autoload. Components are per-character.
 # Ships the chooser (pick → where → Apply) plus the compact item authoring dock.
-# The Pro tier adds full fields + one-click scene wiring.
+# The full version adds full fields + one-click scene wiring.
 
 const CHOOSER_SCRIPT := preload("res://addons/inventory_lite/editor/inventory_chooser_dock.gd")
 const DOCK_SCRIPT := preload("res://addons/inventory_lite/editor/lite_dock.gd")

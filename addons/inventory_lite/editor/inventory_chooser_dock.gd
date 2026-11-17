@@ -9,7 +9,7 @@ extends Control
 #
 # Lite scope: the bag, a plain text list of it (key I) and pickups that fill it.
 # The styled bag with icons and drag and drop, chests that open on touch and the
-# hotbar are the Pro tier. We say so honestly, we don't nag.
+# hotbar are the full version. We say so honestly, we don't nag.
 
 const INVENTORY_SCRIPT := "res://addons/inventory_lite/inventory_lite.gd"
 const PICKUP_SCRIPT := "res://addons/inventory_lite/pickup_lite.gd"
@@ -135,13 +135,13 @@ func _ready() -> void:
 	note.modulate = Color(0.72, 0.75, 0.82)
 	root.add_child(note)
 
-	# Honest funnel, not a nag: say what Pro adds on top of what Lite does.
+	# Honest funnel, not a nag: say what the full version adds on top of what Lite does.
 	var up := Label.new()
-	up.text = "🔒 Pro adds a styled bag with icons, drag and drop and tooltips, a hotbar, chests that open on touch with their own panel, weight and category limits, and wiring to the Save, Quests, Crafting, Vendor and Loot packs."
+	up.text = "🔒 The full version adds a styled bag with icons, drag and drop and tooltips, a hotbar, chests that open on touch with their own panel, weight and category limits, and wiring to the Save, Quests, Crafting, Vendor and Loot packs."
 	up.modulate = Color(0.85, 0.8, 0.55)
 	up.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(up)
-	root.add_child(_btn("Upgrade to Pro →", func(): OS.shell_open(UPGRADE_URL)))
+	root.add_child(_btn("Upgrade to the full version →", func(): OS.shell_open(UPGRADE_URL)))
 
 
 # As wide as what's in it and no wider. The old fixed width pushed a laptop's
@@ -507,7 +507,7 @@ func _refresh_items() -> void:
 			_item_paths.append_array(_scan_items(d))
 			break
 	for p in _item_paths:
-		# marked the way Loot (Lite) and Inventory Pro mark theirs, so a demo item
+		# marked the way Loot (Lite) and the full Inventory mark theirs, so a demo item
 		# isn't mistaken for one of yours
 		var tag := "" if p.begins_with(ITEM_DIR + "/") else "  (example)"
 		_item_pick.add_item(_item_name(load(p)) + tag)

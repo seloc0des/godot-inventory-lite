@@ -178,7 +178,7 @@ func _run_null_slot_does_not_crash() -> void:
 
 func _run_max_stack_default() -> void:
 	await get_tree().process_frame
-	# Document the Lite-tier default: 99. Pro tier defaults to 1 (non-stackable).
+	# Document the Lite-tier default: 99. The full version defaults to 1 (non-stackable).
 	# Locking this in a test so the upgrade migration page stays accurate.
 	var fresh: Resource = ItemLiteScript.new()
 	_assert(int(fresh.max_stack) == 99,

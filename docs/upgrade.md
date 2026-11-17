@@ -1,8 +1,8 @@
-# Upgrade to Inventory (Pro)
+# Upgrade to the full Inventory
 
-Inventory — Lite covers "stack items in slots." The Pro tier adds production-grade features for shipped games.
+Inventory: Lite covers "stack items in slots." The full version adds production-grade features for shipped games.
 
-## What Pro adds
+## What the full version adds
 
 - **Weight limits + category gating.** Items have weight; inventories have a max weight and allowed-category list.
 - **`InventorySettings` Resource.** Author capacity, weight limit, allowed categories, stack policy in one Resource.

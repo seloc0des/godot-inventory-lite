@@ -35,15 +35,15 @@ inventory.snapshot()                                   # for custom save systems
 
 | Feature | Tier |
 |---|---|
-| Styled `InventoryUI` grid with icons (Lite's list is plain text) | Pro |
-| Drag-and-drop slots | Pro |
-| `HotbarUI` | Pro |
-| Per-item tooltips | Pro |
-| Chests that open on touch, with their own panel | Pro |
-| Weight limits + category gating | Pro |
-| `InventoryTheme` Resource (colors, rarity tints) | Pro |
-| Save-contract auto-join | Pro |
-| Shared `Events` autoload (cross-system integration) | Pro |
+| Styled `InventoryUI` grid with icons (Lite's list is plain text) | Full version |
+| Drag-and-drop slots | Full version |
+| `HotbarUI` | Full version |
+| Per-item tooltips | Full version |
+| Chests that open on touch, with their own panel | Full version |
+| Weight limits + category gating | Full version |
+| `InventoryTheme` Resource (colors, rarity tints) | Full version |
+| Save-contract auto-join | Full version |
+| Shared `Events` autoload (cross-system integration) | Full version |
 
 See [docs/upgrade.md](docs/upgrade.md).
 

@@ -5,7 +5,7 @@ extends Control
 # resource's exported scalars and builds a control per field (line edit, spin,
 # checkbox, texture picker), so a non-coder authors the Lite resource without the
 # Inspector or hand-edited .tres. Arrays / dictionaries / sub-resources are left to
-# the Inspector (the Pro dock handles those, plus one-click scene wiring).
+# the Inspector (the full dock handles those, plus one-click scene wiring).
 #
 # Shared body across the Lite tiers — only the CONFIG block differs per pack.
 
@@ -14,7 +14,7 @@ const RESOURCE_SCRIPT := preload("res://addons/inventory_lite/item_resource.gd")
 const DEFAULT_DIR := "res://items"
 const DOCK_NAME := "Items (Lite)"
 const NEW_BASENAME := "new_item"
-const UPGRADE_LABEL := "Pro adds the full item database (weight, rarity) + a styled bag with icons and drag and drop + the EventTrigger node."
+const UPGRADE_LABEL := "The full version adds the full item database (weight, rarity) + a styled bag with icons and drag and drop + the EventTrigger node."
 const UPGRADE_URL := "https://selodev.itch.io/godot-inventory-system"
 # =============================================================
 
@@ -116,7 +116,7 @@ func _build_ui() -> void:
 	up.modulate = Color(0.85, 0.8, 0.55)
 	up.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	root.add_child(up)
-	root.add_child(_button("Upgrade to Pro →", func(): OS.shell_open(UPGRADE_URL)))
+	root.add_child(_button("Upgrade to the full version →", func(): OS.shell_open(UPGRADE_URL)))
 	# EditorFileDialog is created lazily in _open_dialog — it's an editor-only
 	# class, so constructing it here would break any non-editor instantiation.
 
@@ -289,7 +289,7 @@ func _texture(prop: String, value: Variant) -> Control:
 
 func _deferred(kind: String) -> Label:
 	var l := Label.new()
-	l.text = "(%s: edit in Inspector. Pro authors this in-panel)" % kind
+	l.text = "(%s: edit in Inspector. The full version authors this in-panel)" % kind
 	l.modulate = HINT_COLOR
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	return l
